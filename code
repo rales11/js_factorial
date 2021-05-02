@@ -1,0 +1,17 @@
+// Function to find factorials
+
+const factorial = num => {
+  
+  // creates an array of digits from given number
+  let numArr = Array.from(Array(num + 1).keys());
+  numArr.shift();
+  
+  // multiplies numbers together
+  const reducer = (accumulator, currentValue) => accumulator * currentValue;
+  
+  // Calls method and stores
+  let solution = numArr.reduce(reducer);
+  
+  // Returns solution
+  return solution;
+}
